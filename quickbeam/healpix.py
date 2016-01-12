@@ -1,6 +1,5 @@
 import numpy as np
 import quickbeam as qb
-import _healpix
 
 def map2vlm(lmax, vmap, spin):
     assert( np.iscomplexobj(vmap) )

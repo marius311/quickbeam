@@ -10,11 +10,6 @@ import glob
 def configuration(parent_package='',top_path=None):
     from numpy.distutils.misc_util import Configuration
     config = Configuration('quickbeam',parent_package,top_path)
-    config.add_extension('_healpix', ['quickbeam/_healpix.pyf', 'quickbeam/_healpix.f90'],
-                         include_dirs=[healpix_incdir],
-                         library_dirs=[healpix_libdir, cfitsio_libdir],
-                         libraries=['healpix', 'cfitsio', 'gomp'],
-                         extra_compile_args=['-fopenmp'])
     config.add_extension('_mathsc', ['quickbeam/_mathsc.pyf', 'quickbeam/_mathsc.c'])
     config.add_extension('_ghb', ['quickbeam/_ghb.f'])
     return config
