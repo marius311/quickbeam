@@ -1,6 +1,7 @@
 python module _mathsc
 interface
 	subroutine wignerd_cl_from_cf(s1, s2, nfunc, ntheta, lmax, cos_theta, integration_weights, out_cl, in_cf)
+	!f2py threadsafe
 		   intent(c) wignerd_cl_from_cf
 		   intent(c) 
 		   integer intent(in) :: s1, s2, nfunc, ntheta, lmax
@@ -11,6 +12,7 @@ interface
         end subroutine wignerd_cl_from_cf
 
 	subroutine wignerd_cf_from_cl(s1, s2, nfunc, ntheta, lmax, cos_theta, out_cf, in_cl)
+	!f2py threadsafe
 		   intent(c) wignerd_cf_from_cl
 		   intent(c) 
 		   integer intent(in) :: s1, s2, nfunc, ntheta, lmax
